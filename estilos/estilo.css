@@ -1,0 +1,179 @@
+@charset "UTF-8";
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+@font-face {
+    font-family: "gameplay";
+    src: url("/fontes/Gameplay.ttf") format(truetype);
+    font-weight: normal;
+}
+
+:root {
+    /*cores*/
+    --cor1: #092A55;
+    --cor2: #013485;
+    --cor3: #045ED0;
+    --cor4: #013A94;
+    --cor5: #011E48;
+
+    /*fontes*/
+    --fonte1: "Poppins", serif;
+    --fonte2: "gameplay", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #dbe3ec;
+}
+
+header {
+    background-image: linear-gradient(to right, var(--cor2), var(--cor3));
+    font-family: var(--fonte1);
+    height: 200px;
+    min-height: 150px;
+}
+
+header h1 {
+    font-size: 2.5em;
+    font-family: var(--fonte2);
+    color: #ffffff;
+    line-height: 60px;
+    padding-top: 40px;
+    padding-left: 30px;
+}
+
+header > nav {
+    display: flex; /*colcoar os itens lado a lado*/
+    gap: 10px; /*espaço entre os itens da lista*/
+    padding: 0px 10px 10px 10px;
+    justify-content: right;/*alinhou itens da lista para a direita*/
+}
+
+header li{
+    font-weight: bold;
+    list-style: none;
+    margin-right: 15px;
+}
+
+header a {
+    text-decoration: none;
+    color: #ffffff;
+    text-align: right;
+}
+
+header li:hover {
+    background-color: var(--cor1);
+    border-radius: 5px;
+    box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.492);
+    transition: 0.5s;
+    transform: scale(1.1);
+}
+
+main {
+    font-family: var(--fonte1);
+    background-color: white;
+    margin: auto;
+    margin-bottom: 20px;
+    min-width: 300px;/*Valor mínimo que vai ser ocupado da tela*/
+    max-width: 900px;/*Valor máximo que vai ser ocupado da tela*/
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 1px 1px 7px rgba(0, 0, 0, 0.285);
+}
+
+main > article {
+    padding: 40px;
+}
+
+main h2 {
+    font-size: 1.7em;
+    font-family: var(--fonte2);
+    color: var(--cor2);
+    margin-bottom: 30px;
+    border-radius: 3px;
+}
+
+.tituloprincipal {
+    font-size: 2em;
+    color: var(--cor5);
+}
+
+.titulo {
+    background-image: linear-gradient(to right, var(--cor3), transparent 80%);
+    text-shadow: 1px 1px 2px black;
+}
+
+main p {
+    text-align: justify;
+    text-indent: 30px;
+    padding: 20px 0px;
+    line-height: 2;
+}
+
+main ul {
+    margin-bottom: 20px;
+}
+
+main li {
+    list-style-position: inside; /*Diz que eu quero os itens da lista na parte interna da lista*/
+    list-style-type: "\2714";
+    padding: 10px;
+}
+
+.lista {
+    color: var(--cor3);
+}
+
+.link {
+    text-decoration: none;
+    color: black;
+}
+
+.link:hover{
+    color: var(--cor3);
+}
+
+a.link::after {
+    content: "\00A0\1F517";
+}
+
+main img {
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+}
+
+footer {
+    background-image: linear-gradient(to right, var(--cor2), var(--cor3));
+    color: #ffffff;
+    font-size: 0.8em;
+    text-align: center;
+    max-height: 100px;
+    padding: 30px;
+}
+
+footer ul {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    list-style: none;
+}
+
+footer img {
+    width: 30px;
+    height: 30px;
+}
+
+footer ul > li {
+    padding: 10px 15px 0px 15px;
+}
+
+footer ul > li:hover {
+    transition: 0.5s;
+    transform: scale(1.2);
+}
+
+/*Configurar as bordas do main, o footer e adicionar svg para links de redes sociais*/
